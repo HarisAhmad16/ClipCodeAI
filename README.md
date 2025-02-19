@@ -20,6 +20,7 @@ ClipCodeAI is a web application that allows users to interact with an AI-powered
 - PostgreSQL
 - Virtual Environment (venv)
 - OpenAI API Key
+- JWT Secret Key (Can be generated)
 
 ## Getting Started
 
