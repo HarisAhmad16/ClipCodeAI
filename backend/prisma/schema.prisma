@@ -1,0 +1,33 @@
+generator client {
+  provider = "prisma-client-py"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String        @id @default(cuid())
+  name         String
+  email        String        @unique
+  password     String        @db.VarChar(255)
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  clippedCodes ClippedCode[]
+}
+
+model ClippedCode {
+  id              String   @id @default(cuid())
+  title           String
+  codeContent     String
+  language        String
+  notes           String?
+  timeComplexity  String?
+  spaceComplexity String?
+  isAiGenerated   Boolean  @default(false)
+  userId          String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  user            User     @relation(fields: [userId], references: [id])
+}
