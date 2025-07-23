@@ -1,6 +1,6 @@
-# ClipCodeAI
+# ClipCodeAI - Made with Cursor and OpenAI API 
 
-ClipCodeAI is a web application that allows users to interact with an AI-powered programming assistant. The application is built using FastAPI for the backend and React with Tailwind CSS for the frontend.
+ClipCodeAI is a web application that allows users to interact with an AI-powered programming assistant. The application is built using FastAPI for the backend and React with Tailwind CSS for the frontend. I relied on AI to help make this for me to get familiar with what it can do :) 
 
 ![Home](frontend/src/assets/images/Home.png)
 ![About](frontend/src/assets/images/About.png)
